@@ -1,0 +1,130 @@
+{
+  "experiment": "Cost-Latency Optimization \u2014 Phase 7",
+  "date": "2026-04-04T02:39:27.959710",
+  "load_sizes": [
+    50,
+    100,
+    200,
+    500,
+    1000
+  ],
+  "hypothesis": "Adaptive batching reduces cost by \u226520% while keeping latency <5s",
+  "results": {
+    "baseline": [
+      {
+        "mode": "baseline",
+        "events": 50,
+        "batch_size": 1,
+        "latency_ms": 250.59,
+        "processing_cost": 0.00125,
+        "storage_cost": 1.12e-06,
+        "total_cost": 0.001251,
+        "timestamp": "2026-04-04T02:39:24.090163"
+      },
+      {
+        "mode": "baseline",
+        "events": 100,
+        "batch_size": 1,
+        "latency_ms": 500.19,
+        "processing_cost": 0.0025,
+        "storage_cost": 2.25e-06,
+        "total_cost": 0.002502,
+        "timestamp": "2026-04-04T02:39:24.742672"
+      },
+      {
+        "mode": "baseline",
+        "events": 200,
+        "batch_size": 1,
+        "latency_ms": 500.39,
+        "processing_cost": 0.005,
+        "storage_cost": 4.49e-06,
+        "total_cost": 0.005004,
+        "timestamp": "2026-04-04T02:39:25.545365"
+      },
+      {
+        "mode": "baseline",
+        "events": 500,
+        "batch_size": 1,
+        "latency_ms": 500.58,
+        "processing_cost": 0.0125,
+        "storage_cost": 1.123e-05,
+        "total_cost": 0.012511,
+        "timestamp": "2026-04-04T02:39:26.448793"
+      },
+      {
+        "mode": "baseline",
+        "events": 1000,
+        "batch_size": 1,
+        "latency_ms": 500.29,
+        "processing_cost": 0.025,
+        "storage_cost": 2.246e-05,
+        "total_cost": 0.025022,
+        "timestamp": "2026-04-04T02:39:27.454578"
+      }
+    ],
+    "optimized": [
+      {
+        "mode": "optimized",
+        "events": 50,
+        "batch_size": 10,
+        "latency_ms": 150.54,
+        "processing_cost": 0.00075,
+        "storage_cost": 1.12e-06,
+        "total_cost": 0.000751,
+        "timestamp": "2026-04-04T02:39:24.241271"
+      },
+      {
+        "mode": "optimized",
+        "events": 100,
+        "batch_size": 10,
+        "latency_ms": 300.74,
+        "processing_cost": 0.0015,
+        "storage_cost": 2.25e-06,
+        "total_cost": 0.001502,
+        "timestamp": "2026-04-04T02:39:25.043889"
+      },
+      {
+        "mode": "optimized",
+        "events": 200,
+        "batch_size": 50,
+        "latency_ms": 400.57,
+        "processing_cost": 0.003,
+        "storage_cost": 4.49e-06,
+        "total_cost": 0.003004,
+        "timestamp": "2026-04-04T02:39:25.946437"
+      },
+      {
+        "mode": "optimized",
+        "events": 500,
+        "batch_size": 50,
+        "latency_ms": 500.76,
+        "processing_cost": 0.0075,
+        "storage_cost": 1.123e-05,
+        "total_cost": 0.007511,
+        "timestamp": "2026-04-04T02:39:26.949921"
+      },
+      {
+        "mode": "optimized",
+        "events": 1000,
+        "batch_size": 100,
+        "latency_ms": 500.39,
+        "processing_cost": 0.015,
+        "storage_cost": 2.246e-05,
+        "total_cost": 0.015022,
+        "timestamp": "2026-04-04T02:39:27.955503"
+      }
+    ]
+  },
+  "analysis": {
+    "avg_latency_baseline_ms": 450.41,
+    "avg_latency_optimized_ms": 370.6,
+    "latency_change_pct": -17.72,
+    "avg_cost_baseline": 0.009258,
+    "avg_cost_optimized": 0.005558,
+    "cost_reduction_pct": 39.97,
+    "sla_met_baseline": 5,
+    "sla_met_optimized": 5,
+    "success_metric_achieved": true
+  },
+  "conclusion": "Adaptive batch sizing successfully reduces processing cost by 39.97% compared to baseline, while maintaining SLA compliance for all load levels."
+}
