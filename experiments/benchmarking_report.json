@@ -1,0 +1,246 @@
+{
+  "report_title": "Phase 8 \u2014 Performance & Cost Benchmarking",
+  "generated_at": "2026-04-04T02:42:11.128354",
+  "pipeline_metrics": {
+    "total_events": 1000,
+    "restock_alerts": 470,
+    "alert_rate_pct": 47.0,
+    "categories": [
+      {
+        "name": "Electronics",
+        "orders": 205,
+        "units": 630
+      },
+      {
+        "name": "Clothing",
+        "orders": 199,
+        "units": 575
+      },
+      {
+        "name": "Kitchen",
+        "orders": 198,
+        "units": 578
+      },
+      {
+        "name": "Sports",
+        "orders": 197,
+        "units": 552
+      },
+      {
+        "name": "Books",
+        "orders": 124,
+        "units": 338
+      },
+      {
+        "name": "Beauty",
+        "orders": 77,
+        "units": 220
+      }
+    ],
+    "order_statuses": [
+      {
+        "status": "placed",
+        "count": 400
+      },
+      {
+        "status": "confirmed",
+        "count": 308
+      },
+      {
+        "status": "shipped",
+        "count": 134
+      },
+      {
+        "status": "delivered",
+        "count": 115
+      },
+      {
+        "status": "cancelled",
+        "count": 43
+      }
+    ]
+  },
+  "experiment_1": {
+    "name": "Data Rate vs Latency/Cost",
+    "results": [
+      {
+        "mode": "baseline",
+        "num_events": 50,
+        "batch_size": 1,
+        "latency_ms": 250.66,
+        "cost": 0.00125,
+        "sla_met": true
+      },
+      {
+        "mode": "optimized",
+        "num_events": 50,
+        "batch_size": 10,
+        "latency_ms": 150.12,
+        "cost": 0.00075,
+        "sla_met": true
+      },
+      {
+        "mode": "baseline",
+        "num_events": 100,
+        "batch_size": 1,
+        "latency_ms": 500.84,
+        "cost": 0.0025,
+        "sla_met": true
+      },
+      {
+        "mode": "optimized",
+        "num_events": 100,
+        "batch_size": 10,
+        "latency_ms": 300.65,
+        "cost": 0.0015,
+        "sla_met": true
+      },
+      {
+        "mode": "baseline",
+        "num_events": 200,
+        "batch_size": 1,
+        "latency_ms": 500.7,
+        "cost": 0.005,
+        "sla_met": true
+      },
+      {
+        "mode": "optimized",
+        "num_events": 200,
+        "batch_size": 50,
+        "latency_ms": 400.49,
+        "cost": 0.003,
+        "sla_met": true
+      },
+      {
+        "mode": "baseline",
+        "num_events": 500,
+        "batch_size": 1,
+        "latency_ms": 500.4,
+        "cost": 0.0125,
+        "sla_met": true
+      },
+      {
+        "mode": "optimized",
+        "num_events": 500,
+        "batch_size": 50,
+        "latency_ms": 500.39,
+        "cost": 0.0075,
+        "sla_met": true
+      },
+      {
+        "mode": "baseline",
+        "num_events": 750,
+        "batch_size": 1,
+        "latency_ms": 500.48,
+        "cost": 0.01875,
+        "sla_met": true
+      },
+      {
+        "mode": "optimized",
+        "num_events": 750,
+        "batch_size": 100,
+        "latency_ms": 500.62,
+        "cost": 0.01125,
+        "sla_met": true
+      },
+      {
+        "mode": "baseline",
+        "num_events": 1000,
+        "batch_size": 1,
+        "latency_ms": 500.41,
+        "cost": 0.025,
+        "sla_met": true
+      },
+      {
+        "mode": "optimized",
+        "num_events": 1000,
+        "batch_size": 100,
+        "latency_ms": 500.76,
+        "cost": 0.015,
+        "sla_met": true
+      }
+    ]
+  },
+  "experiment_2": {
+    "name": "Failure Recovery Analysis",
+    "results": [
+      {
+        "component": "Kafka Broker",
+        "failure_time": "02:28:00",
+        "recovery_time": "02:28:15",
+        "downtime_sec": 15,
+        "data_lost": 0,
+        "impact": "Producer blocked, consumer unaffected",
+        "auto_recoverable": true
+      },
+      {
+        "component": "PostgreSQL",
+        "failure_time": "02:31:35",
+        "recovery_time": "02:33:27",
+        "downtime_sec": 112,
+        "data_lost": "In-flight writes",
+        "impact": "Monitor crashed, psycopg2.OperationalError",
+        "auto_recoverable": false
+      },
+      {
+        "component": "Burst Traffic (1000 events)",
+        "failure_time": "N/A",
+        "recovery_time": "N/A",
+        "downtime_sec": 0,
+        "data_lost": 0,
+        "impact": "No failure \u2014 pipeline handled spike",
+        "auto_recoverable": true
+      }
+    ]
+  },
+  "experiment_3": {
+    "name": "Batch Size Tuning",
+    "results": [
+      {
+        "batch_size": 1,
+        "latency_ms": 500.29,
+        "cost": 0.025,
+        "cost_saving_pct": 0.0
+      },
+      {
+        "batch_size": 10,
+        "latency_ms": 500.24,
+        "cost": 0.015,
+        "cost_saving_pct": 40.0
+      },
+      {
+        "batch_size": 25,
+        "latency_ms": 200.35,
+        "cost": 0.015,
+        "cost_saving_pct": 40.0
+      },
+      {
+        "batch_size": 50,
+        "latency_ms": 100.47,
+        "cost": 0.015,
+        "cost_saving_pct": 40.0
+      },
+      {
+        "batch_size": 100,
+        "latency_ms": 100.24,
+        "cost": 0.015,
+        "cost_saving_pct": 40.0
+      },
+      {
+        "batch_size": 200,
+        "latency_ms": 100.56,
+        "cost": 0.015,
+        "cost_saving_pct": 40.0
+      }
+    ]
+  },
+  "summary": {
+    "avg_latency_baseline_ms": 458.91,
+    "avg_latency_optimized_ms": 392.17,
+    "latency_improvement_pct": 14.54,
+    "avg_cost_baseline": 0.010833,
+    "avg_cost_optimized": 0.0065,
+    "cost_reduction_pct": 40.0,
+    "all_success_metrics_met": true
+  }
+}
