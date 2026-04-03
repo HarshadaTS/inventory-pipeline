@@ -1,4 +1,4 @@
-# Inventory Pipeline — CSG527 Cloud Computing Project
+# Inventory Pipeline 
 
 ## Project Title
 Design and Evaluation of an Intelligent, Scalable, and Cost-Aware Cloud Data
@@ -41,12 +41,28 @@ a restock order to the supplier.
 | Cloud | AWS Free Tier |
 
 ## Project Phases
-- [ ] Phase 1 — Problem Definition
-- [ ] Phase 2 — Pipeline Design
-- [ ] Phase 3 — Technology Stack
-- [ ] Phase 4 — Smallest Working Pipeline
-- [ ] Phase 5 — Cloud Deployment
+- [x] Phase 1 — Problem Definition
+- [x] Phase 2 — Pipeline Design
+- [x] Phase 3 — Technology Stack locked
+- [x] Phase 4 — Smallest Working Pipeline
+- [ ] Phase 5 — Batch Processing + Airflow
 - [ ] Phase 6 — Monitoring & Fault Testing
 - [ ] Phase 7 — Intelligence & Optimization
 - [ ] Phase 8 — Evaluation & Analysis
 - [ ] Phase 9 — Documentation & Presentation
+
+## Results So Far
+- 1000 order events generated and streamed
+- 470 restock alerts detected and saved to PostgreSQL
+- Full pipeline working end-to-end locally
+
+## Repository Structure
+- data-generator — fake data generator (1000 orders)
+- ingestion — Kafka producer
+- stream-processor — reads Kafka, saves to PostgreSQL
+- batch-processor — coming in Phase 5
+- orchestration — Airflow DAGs coming in Phase 5
+- monitoring — Grafana config coming in Phase 6
+- experiments — benchmark results coming in Phase 8
+- infra — Terraform AWS config coming in Phase 5
+
