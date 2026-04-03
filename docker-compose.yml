@@ -1,5 +1,3 @@
-
-
 services:
 
   zookeeper:
@@ -44,6 +42,25 @@ services:
       - "3000:3000"
     depends_on:
       - postgres
+
+  airflow:
+    image: apache/airflow:2.8.1-python3.11
+    container_name: airflow
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://admin:admin123@postgres/inventory
+      _AIRFLOW_DB_MIGRATE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: admin
+      _AIRFLOW_WWW_USER_PASSWORD: admin123
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./orchestration:/opt/airflow/dags
+    command: standalone
 
 volumes:
   postgres_data:
