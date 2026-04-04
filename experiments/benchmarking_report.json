@@ -1,6 +1,6 @@
 {
   "report_title": "Phase 8 \u2014 Performance & Cost Benchmarking",
-  "generated_at": "2026-04-04T02:42:11.128354",
+  "generated_at": "2026-04-04T11:34:34.736621",
   "pipeline_metrics": {
     "total_events": 1000,
     "restock_alerts": 470,
@@ -67,7 +67,7 @@
         "mode": "baseline",
         "num_events": 50,
         "batch_size": 1,
-        "latency_ms": 250.66,
+        "latency_ms": 250.49,
         "cost": 0.00125,
         "sla_met": true
       },
@@ -75,7 +75,7 @@
         "mode": "optimized",
         "num_events": 50,
         "batch_size": 10,
-        "latency_ms": 150.12,
+        "latency_ms": 150.34,
         "cost": 0.00075,
         "sla_met": true
       },
@@ -83,7 +83,7 @@
         "mode": "baseline",
         "num_events": 100,
         "batch_size": 1,
-        "latency_ms": 500.84,
+        "latency_ms": 500.51,
         "cost": 0.0025,
         "sla_met": true
       },
@@ -91,7 +91,7 @@
         "mode": "optimized",
         "num_events": 100,
         "batch_size": 10,
-        "latency_ms": 300.65,
+        "latency_ms": 300.49,
         "cost": 0.0015,
         "sla_met": true
       },
@@ -99,7 +99,7 @@
         "mode": "baseline",
         "num_events": 200,
         "batch_size": 1,
-        "latency_ms": 500.7,
+        "latency_ms": 500.27,
         "cost": 0.005,
         "sla_met": true
       },
@@ -107,7 +107,7 @@
         "mode": "optimized",
         "num_events": 200,
         "batch_size": 50,
-        "latency_ms": 400.49,
+        "latency_ms": 400.81,
         "cost": 0.003,
         "sla_met": true
       },
@@ -115,7 +115,7 @@
         "mode": "baseline",
         "num_events": 500,
         "batch_size": 1,
-        "latency_ms": 500.4,
+        "latency_ms": 500.32,
         "cost": 0.0125,
         "sla_met": true
       },
@@ -123,7 +123,7 @@
         "mode": "optimized",
         "num_events": 500,
         "batch_size": 50,
-        "latency_ms": 500.39,
+        "latency_ms": 500.43,
         "cost": 0.0075,
         "sla_met": true
       },
@@ -131,7 +131,7 @@
         "mode": "baseline",
         "num_events": 750,
         "batch_size": 1,
-        "latency_ms": 500.48,
+        "latency_ms": 500.45,
         "cost": 0.01875,
         "sla_met": true
       },
@@ -139,7 +139,7 @@
         "mode": "optimized",
         "num_events": 750,
         "batch_size": 100,
-        "latency_ms": 500.62,
+        "latency_ms": 500.38,
         "cost": 0.01125,
         "sla_met": true
       },
@@ -147,7 +147,7 @@
         "mode": "baseline",
         "num_events": 1000,
         "batch_size": 1,
-        "latency_ms": 500.41,
+        "latency_ms": 500.15,
         "cost": 0.025,
         "sla_met": true
       },
@@ -155,7 +155,7 @@
         "mode": "optimized",
         "num_events": 1000,
         "batch_size": 100,
-        "latency_ms": 500.76,
+        "latency_ms": 500.65,
         "cost": 0.015,
         "sla_met": true
       }
@@ -198,46 +198,46 @@
     "results": [
       {
         "batch_size": 1,
-        "latency_ms": 500.29,
+        "latency_ms": 500.19,
         "cost": 0.025,
         "cost_saving_pct": 0.0
       },
       {
         "batch_size": 10,
-        "latency_ms": 500.24,
+        "latency_ms": 500.46,
         "cost": 0.015,
         "cost_saving_pct": 40.0
       },
       {
         "batch_size": 25,
-        "latency_ms": 200.35,
+        "latency_ms": 200.33,
         "cost": 0.015,
         "cost_saving_pct": 40.0
       },
       {
         "batch_size": 50,
-        "latency_ms": 100.47,
+        "latency_ms": 100.46,
         "cost": 0.015,
         "cost_saving_pct": 40.0
       },
       {
         "batch_size": 100,
-        "latency_ms": 100.24,
+        "latency_ms": 100.48,
         "cost": 0.015,
         "cost_saving_pct": 40.0
       },
       {
         "batch_size": 200,
-        "latency_ms": 100.56,
+        "latency_ms": 100.48,
         "cost": 0.015,
         "cost_saving_pct": 40.0
       }
     ]
   },
   "summary": {
-    "avg_latency_baseline_ms": 458.91,
-    "avg_latency_optimized_ms": 392.17,
-    "latency_improvement_pct": 14.54,
+    "avg_latency_baseline_ms": 458.7,
+    "avg_latency_optimized_ms": 392.18,
+    "latency_improvement_pct": 14.5,
     "avg_cost_baseline": 0.010833,
     "avg_cost_optimized": 0.0065,
     "cost_reduction_pct": 40.0,
