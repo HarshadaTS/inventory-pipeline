@@ -1,0 +1,194 @@
+{
+  "batch_run_time": "2026-04-04T23:09:45.546239",
+  "pipeline_metrics": {
+    "total_events": 1000,
+    "total_alerts": 470
+  },
+  "restock_forecast": [
+    {
+      "product_name": "Winter Jacket",
+      "category": "Clothing",
+      "current_stock": 0,
+      "restock_threshold": 8,
+      "total_units_sold": 60,
+      "recommended_restock_qty": 120
+    },
+    {
+      "product_name": "Coffee Maker",
+      "category": "Kitchen",
+      "current_stock": 0,
+      "restock_threshold": 12,
+      "total_units_sold": 75,
+      "recommended_restock_qty": 150
+    },
+    {
+      "product_name": "Novel: The Last Code",
+      "category": "Books",
+      "current_stock": 0,
+      "restock_threshold": 50,
+      "total_units_sold": 136,
+      "recommended_restock_qty": 272
+    },
+    {
+      "product_name": "Blender",
+      "category": "Kitchen",
+      "current_stock": 0,
+      "restock_threshold": 15,
+      "total_units_sold": 139,
+      "recommended_restock_qty": 278
+    },
+    {
+      "product_name": "USB-C Hub",
+      "category": "Electronics",
+      "current_stock": 0,
+      "restock_threshold": 15,
+      "total_units_sold": 94,
+      "recommended_restock_qty": 188
+    },
+    {
+      "product_name": "Python Programming",
+      "category": "Books",
+      "current_stock": 0,
+      "restock_threshold": 30,
+      "total_units_sold": 117,
+      "recommended_restock_qty": 234
+    },
+    {
+      "product_name": "Face Moisturiser",
+      "category": "Beauty",
+      "current_stock": 0,
+      "restock_threshold": 35,
+      "total_units_sold": 104,
+      "recommended_restock_qty": 208
+    },
+    {
+      "product_name": "Cotton T-Shirt",
+      "category": "Clothing",
+      "current_stock": 0,
+      "restock_threshold": 40,
+      "total_units_sold": 61,
+      "recommended_restock_qty": 122
+    },
+    {
+      "product_name": "Denim Jeans",
+      "category": "Clothing",
+      "current_stock": 0,
+      "restock_threshold": 20,
+      "total_units_sold": 148,
+      "recommended_restock_qty": 296
+    },
+    {
+      "product_name": "Mechanical Keyboard",
+      "category": "Electronics",
+      "current_stock": 0,
+      "restock_threshold": 10,
+      "total_units_sold": 153,
+      "recommended_restock_qty": 306
+    },
+    {
+      "product_name": "Resistance Bands",
+      "category": "Sports",
+      "current_stock": 0,
+      "restock_threshold": 30,
+      "total_units_sold": 140,
+      "recommended_restock_qty": 280
+    },
+    {
+      "product_name": "Air Fryer",
+      "category": "Kitchen",
+      "current_stock": 0,
+      "restock_threshold": 10,
+      "total_units_sold": 52,
+      "recommended_restock_qty": 104
+    },
+    {
+      "product_name": "Wireless Headphones",
+      "category": "Electronics",
+      "current_stock": 0,
+      "restock_threshold": 20,
+      "total_units_sold": 62,
+      "recommended_restock_qty": 124
+    },
+    {
+      "product_name": "Running Shoes",
+      "category": "Sports",
+      "current_stock": 5,
+      "restock_threshold": 12,
+      "total_units_sold": 8,
+      "recommended_restock_qty": 100
+    },
+    {
+      "product_name": "Yoga Mat",
+      "category": "Sports",
+      "current_stock": 20,
+      "restock_threshold": 25,
+      "total_units_sold": 8,
+      "recommended_restock_qty": 100
+    }
+  ],
+  "category_sales": [
+    {
+      "category": "Clothing",
+      "total_orders": 189,
+      "units_sold": 540,
+      "revenue": 36279.6
+    },
+    {
+      "category": "Electronics",
+      "total_orders": 199,
+      "units_sold": 614,
+      "revenue": 35953.86
+    },
+    {
+      "category": "Kitchen",
+      "total_orders": 191,
+      "units_sold": 556,
+      "revenue": 29159.44
+    },
+    {
+      "category": "Sports",
+      "total_orders": 190,
+      "units_sold": 534,
+      "revenue": 22199.66
+    },
+    {
+      "category": "Books",
+      "total_orders": 114,
+      "units_sold": 314,
+      "revenue": 7202.86
+    },
+    {
+      "category": "Beauty",
+      "total_orders": 74,
+      "units_sold": 213,
+      "revenue": 4896.87
+    }
+  ],
+  "top_products": [
+    {
+      "product_name": "Mechanical Keyboard",
+      "total_sold": 224,
+      "total_revenue": 20157.76
+    },
+    {
+      "product_name": "Face Moisturiser",
+      "total_sold": 213,
+      "total_revenue": 4896.87
+    },
+    {
+      "product_name": "Wireless Headphones",
+      "total_sold": 205,
+      "total_revenue": 10247.95
+    },
+    {
+      "product_name": "Air Fryer",
+      "total_sold": 202,
+      "total_revenue": 14137.98
+    },
+    {
+      "product_name": "Denim Jeans",
+      "total_sold": 197,
+      "total_revenue": 10833.03
+    }
+  ]
+}
